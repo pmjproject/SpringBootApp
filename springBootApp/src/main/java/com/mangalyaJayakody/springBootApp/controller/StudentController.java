@@ -16,7 +16,6 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-
     @GetMapping("/all")
     public List<Student> allStudent() {
         return studentService.findAllStudents();
@@ -41,6 +40,5 @@ public class StudentController {
     public Optional<Student> getStudentByID(@PathVariable Integer Id) {
         return studentService.getStudentByID(Id);
     }
-
 
 }

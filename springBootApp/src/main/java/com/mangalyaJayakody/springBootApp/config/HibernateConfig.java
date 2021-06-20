@@ -19,8 +19,6 @@ public class HibernateConfig {
         if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration();
-
-
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
                 settings.put(Environment.URL, "jdbc:mysql://localhost:3306/student_app");
