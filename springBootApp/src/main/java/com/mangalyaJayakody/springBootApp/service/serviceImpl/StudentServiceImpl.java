@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -40,7 +41,15 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void findById(Integer id) {
-//        return studentDao.findByIdStudent(Id);
+    public String deleteStudent(Integer id) {
+        studentDao.deleteStudent(id);
+        return "Deleted";
     }
+
+    @Override
+    public Optional<Student> getStudentByID(Integer id) {
+        return studentDao.getStudentByID(id);
+    }
+
+
 }
